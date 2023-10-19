@@ -1,0 +1,111 @@
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <title>Armonie armonieCopy</title>
+    </head>
+    <body>
+<div class="logo">
+      <img src="armonieCopy.jpg" alt="logo">
+
+    </div>
+        <div class="container">
+
+       <div class="box">    
+      <form action="index.html" method="post">
+        
+      
+        <fieldset>
+          
+          <legend><span><img src="logoArmonie.jpg" alt="logo" class="number"></span>BAIE STORWIZE</legend>
+          
+          <label for="ipbaie">Adresse IP:</label>
+          <input type="text" id="ipbaie" name="ipbaie">
+          
+          <label for="nombaie">Nom de la baie:</label>
+          <input type="text" id="nombaie" name="nombaie">
+          
+          <label for="nomsys">Nom du système:</label>
+          <input type="text" id="nomsys" name="nomsys">
+          
+          
+        
+        </fieldset>
+        
+        <fieldset>
+
+
+          <legend><span><img src="logoArmonie.jpg" alt="logo" class="number"></span>PARTITIONS</legend>
+          
+          <label for="ipbaie">Adresse IP :</label>
+          <input type="text" id="iphmc" name="iphmc">
+          
+          <label for="user">Nom utilisateur:</label>
+          <input type="text" id="user" name="user">
+          
+          <label for="mot_de_passe">Nom du système:</label>
+          <input type="text" id="mot_de_passe" name="mot_de_passe">
+          
+        </fieldset> 
+    
+    </form>
+
+</div> 
+    
+<div class="box">
+    <form action="index.html" method="post " id="form">
+        
+        <fieldset>
+
+            
+          <legend><span><img src="logoArmonie.jpg" alt="logo" class="number"></span>HMC</legend>
+          
+          <label for="nomprtprod">Nom partition de production :</label>
+          <input type="text" id="nomprtprod" name="nomprtprod">
+          
+          <label for="ipprtprd">IP production:</label>
+          <input type="text" id="ipprtprd" name="ipprtprd">
+          
+          <label for="nomprtclone">Nom partition clone:</label>
+          <input type="text" id="nomprtclone" name="nomprtclone">
+
+          <label for="ipprtclone"> IP clone:</label>
+          <input type="text" id="nomprtclone" name="nomprtclone">
+
+          <label for="nomneta">Nom NETA:</label>
+          <input type="text" id="nomneta" name="nomneta">
+          
+        </fieldset> 
+
+     
+        <button :hover type="submit" onclick="return validerFormulaire();">Envoyer</button >
+      
+<script>
+  function validerFormulaire() {
+    var formulaires = document.getElementsByTagName("form");
+
+    for (var f = 0; f < formulaires.length; f++) {
+        var champs = formulaires[f].getElementsByTagName("input");
+
+        for (var i = 0; i < champs.length; i++) {
+            if (champs[i].type === "text" && champs[i].value.trim() === "") {
+                alert("Veuillez remplir tous les champs du formulaire.");
+                return false; 
+                // Empêche la soumission du formulaire
+            }
+        }
+    }
+
+    return true; 
+    // Soumission autorisée si tous les champs sont remplis
+}
+
+</script>
+      </form>
+    </div>
+
+    </body>
+    </div>
+</html>
